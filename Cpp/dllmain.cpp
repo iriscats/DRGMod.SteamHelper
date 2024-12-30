@@ -70,7 +70,7 @@ void InitHook() {
 		return;
 	}
 	// You are allowed to use the 'Unreal' namespace in this function and anywhere else after this function has fired.
-	auto GetSteamIdFunction = UObjectGlobals::StaticFindObject<UFunction*>(nullptr, nullptr, STR("/Game/SteamHelper/SteamHelper.SteamHelper_C:GetSteamIds"));
+	auto GetSteamIdFunction = UObjectGlobals::StaticFindObject<UFunction*>(nullptr, nullptr, STR("/Game/SteamHelper/SteamHelper.SteamHelper_C:GetSteamId"));
 
 	Output::send<LogLevel::Verbose>(STR("Object Name: {}\n"), GetSteamIdFunction->GetFullName());
 	if (GetSteamIdFunction) {
@@ -88,7 +88,7 @@ public:
 	MyAwesomeMod() : CppUserModBase()
 	{
 		ModName = STR("SteamHelper");
-		ModVersion = STR("1.0");
+		ModVersion = STR("0.0.1");
 		ModDescription = STR("This is my awesome mod");
 		ModAuthors = STR("iriscat");
 		// Do not change this unless you want to target a UE4SS version
